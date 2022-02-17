@@ -10,10 +10,53 @@
     <meta name="author" content="" />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+      href="https://unpkg.com/tailwindcss@2.2.9/dist/tailwind.min.css"
     />
   </head>
-  <body class="h-full" style="background: #333333">
+  <style>
+    #videobcg {
+      width: inherit;
+      height: inherit;
+      -o-filter: blur(15px);
+      filter: blur(15px);
+      object-fit: cover;
+      transform: scale(1.04);
+    }
+  </style>
+  <header class="relative flex items-center h-screen overflow-hidden">
+    <div
+      class="relative z-30 text-2xl w-full text-white bg-opacity-50 rounded-xl"
+    >
+      <div class="w-full p-2">
+        <video autoplay muted loop id="myVideo" width="100%">
+          <source
+            src="https://cdn.kmc.solutions/project-statics/videoplayback.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </div>
+    <video
+      autoplay
+      loop
+      muted
+      id="videobcg"
+      class="absolute z-10 w-auto min-w-full min-h-full max-w-none"
+    >
+      <source
+        src="https://cdn.kmc.solutions/project-statics/videoplayback.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+  </header>
+  <!-- <body class="h-full" style="background: #333333">
+    <video autoplay muted loop id="myVideo">
+      <source
+        src="https://cdn.kmc.solutions/project-statics/videoplayback.mp4"
+        type="video/mp4"
+      />
+    </video>
     <div class="flex flex-col h-screen justify-center">
       <div class="flex text-white justify-center w-full items-end mb-5">
         <img
@@ -33,23 +76,11 @@
       <div class="flex text-white justify-center w-full items-end my-5">
         <button
           style="background: #f99d3a"
-          class="
-            rounded-sm
-            text-white
-            block
-            rounded-sm
-            font-bold
-            text-sm
-            py-3
-            px-6
-            ml-2
-            flex
-            items-center
-          "
+          class="rounded-sm text-white block rounded-sm font-bold text-sm py-3 px-6 ml-2 flex items-center"
         >
           Click to Proceed
         </button>
       </div>
     </div>
-  </body>
+  </body> -->
 </html>
